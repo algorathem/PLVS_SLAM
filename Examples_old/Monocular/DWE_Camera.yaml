@@ -1,0 +1,80 @@
+%YAML:1.0
+#--------------------------------------------------------------------------------------------
+# Camera Parameters. UPDATED FOR DWE FISHEYE
+#--------------------------------------------------------------------------------------------
+File.version: "1.0"
+
+# CHANGE THIS: Use KannalaBrandt8 for Fisheye
+Camera.type: "KannalaBrandt8"
+Camera.RGB: 1
+
+# Camera calibration (Intrinsics)
+Camera1.fx: 458.654
+Camera1.fy: 457.296
+Camera1.cx: 367.215
+Camera1.cy: 248.375
+
+# CHANGE THIS: KB8 uses k1, k2, k3, k4 (Delete p1, p2)
+Camera1.k1: -0.28340811
+Camera1.k2: 0.07395907
+Camera1.k3: 0.00019359
+Camera1.k4: 0.00001761
+
+# DOUBLE CHECK THESE: Must match your .png pixel size
+Camera.width: 640
+Camera.height: 480
+Camera.newWidth: 640
+Camera.newHeight: 480
+
+# Camera frames per second (Check your bag frequency)
+Camera.fps: 15
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters
+#--------------------------------------------------------------------------------------------
+
+# Number of features per image (Lower this to 800 if it's too slow on the T490)
+ORBextractor.nFeatures: 2500
+
+# Scale factor between levels in the scale pyramid   
+ORBextractor.scaleFactor: 1.1
+
+# Number of levels in the scale pyramid  
+ORBextractor.nLevels: 8
+
+# Fast threshold: Lower these if the pool has low contrast (e.g., 15 and 5)
+Camera.Rectification: 0   # CRITICAL: Do not rectify KB8 models
+ORBextractor.iniThFAST: 8
+ORBextractor.minThFAST: 3
+
+#--------------------------------------------------------------------------------------------
+# Viewer Parameters
+#--------------------------------------------------------------------------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1.0
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2.0
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3.0
+Viewer.ViewpointX: 0.0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -1.8
+Viewer.ViewpointF: 500.0
+
+System.thFarPoints: 50.0
+Condition.MinInliers: 15
+ORBextractor.patchSize: 41 
+KeyFrame.maxFovCentersDistance: 0.2
+
+#--------------------------------------------------------------------------------------------
+# Line Parameters (NEW)
+#--------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------
+System.MultiMap: 0     
+Line.on: 1
+mnLineTrackWeigth: 5.0  
+
+PointCloudMapping.on: 1
+PointCloudMapping.save: 1
+PointCloudMapping.filename: "AUV_Pool_Map.ply"
+PointCloudMapping.type: "octree_point"

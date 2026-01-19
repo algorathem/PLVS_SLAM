@@ -53,7 +53,7 @@ $DEBUG_PREFIX ../Examples$SUFFIX/Stereo/stereo_euroc$SUFFIX \
 
 echo "" 
 echo metric generated with evaluate_ate_scale.py: 
-python evaluate_ate_scale.py ../evaluation/Ground_truth/EuRoC_left_cam/"$SEQUENCE"_GT.txt "f_"$OUTPUT_BASE_NAME".txt" --plot "f_"$OUTPUT_BASE_NAME".pdf"
+python3 evaluate_ate_scale.py ../evaluation/Ground_truth/EuRoC_left_cam/"$SEQUENCE"_GT.txt "f_"$OUTPUT_BASE_NAME".txt" --plot "f_"$OUTPUT_BASE_NAME".pdf"
 
 echo "" 
 echo metrics generated with evaluate_euroc.sh:

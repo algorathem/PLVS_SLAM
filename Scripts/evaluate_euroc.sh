@@ -36,8 +36,8 @@ KF_CAMERA_TRAJECTORY=$TRAJECTORY_DIR/kf_$TRAJECTORY_OUTPUT
 #echo F_CAMERA_TRAJECTORY: $F_CAMERA_TRAJECTORY
 #echo KF_CAMERA_TRAJECTORY: $KF_CAMERA_TRAJECTORY
 
-python $EVALUATE_SCRIPT --verbose $GROUDTRUTH_DATA_PATH $F_CAMERA_TRAJECTORY --save_transformation transformation.txt --plot CameraTrajectory.png
-python $EVALUATE_SCRIPT --verbose $GROUDTRUTH_DATA_PATH $KF_CAMERA_TRAJECTORY --save_transformation transformation.txt --plot KeyFrameTrajectory.png
+python3 $EVALUATE_SCRIPT --verbose $GROUDTRUTH_DATA_PATH $F_CAMERA_TRAJECTORY --save_transformation transformation.txt --plot CameraTrajectory.png
+python3 $EVALUATE_SCRIPT --verbose $GROUDTRUTH_DATA_PATH $KF_CAMERA_TRAJECTORY --save_transformation transformation.txt --plot KeyFrameTrajectory.png
 
 # for evo info https://github.com/MichaelGrupp/evo/wiki/evo_traj
 #evo_ape tum $TRAJECTORY_DIR/CameraTrajectory.txt $GROUDTRUTH_DATA_PATH -a # without s!
