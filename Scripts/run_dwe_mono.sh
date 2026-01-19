@@ -7,7 +7,7 @@ SEQUENCE="Mecatron_Dataset"       # Label for your output files
 
 # 2. Paths - Pointing to your Downloads folder
 # This should be the folder containing the 'mav0' directory
-PATH_TO_SEQUENCE_FOLDER="/home/kc/Downloads/AUV_Mecatron_Dataset"
+PATH_TO_SEQUENCE_FOLDER="/home/kc/Downloads/Kevin_dataset"
 OUTPUT_BASE_NAME="dataset_"$SEQUENCE"_mono"
 
 echo "PATH_TO_SEQUENCE_FOLDER: $PATH_TO_SEQUENCE_FOLDER"
