@@ -1,0 +1,17 @@
+comment: Kevin cam1 camera
+distortion_coefficients:
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+distortion_model: plumb_bob
+intrinsics:
+- 342.7555237113079
+- 342.7555237113079
+- 320.0
+- 240.0
+resolution:
+- 640
+- 480
+sensor_type: camera

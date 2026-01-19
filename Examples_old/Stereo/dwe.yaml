@@ -1,0 +1,97 @@
+# ============================================================
+# DWE Stereo Configuration — Kannala–Brandt Camera Model
+# ============================================================
+
+# -----------------------------
+# Camera Model
+# -----------------------------
+Camera.type: "KannalaBrandt"
+
+# Image resolution
+Camera.width: 752
+Camera.height: 480
+
+# Intrinsics (rectified stereo)
+Camera.fx: 458.654
+Camera.fy: 457.296
+Camera.cx: 367.215
+Camera.cy: 248.375
+
+# Stereo baseline * fx
+Camera.bf: 47.90639384423901
+
+# Depth threshold (meters)
+ThDepth: 40.0
+
+# -----------------------------
+# Kannala–Brandt Distortion
+# r(θ) = θ + k1 θ^3 + k2 θ^5 + k3 θ^7 + k4 θ^9
+# -----------------------------
+Camera.k1: -0.28340811
+Camera.k2: 0.07395907
+Camera.k3: 0.00019359
+Camera.k4: 0.0000176187
+
+# -----------------------------
+# Frame Rate
+# -----------------------------
+Camera.fps: 20.0
+
+# -----------------------------
+# ORB Extractor (still used for tracking)
+# -----------------------------
+ORBextractor.nFeatures: 2000
+ORBextractor.scaleFactor: 1.2
+ORBextractor.nLevels: 8
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+# -----------------------------
+# Viewer (optional)
+# -----------------------------
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1.0
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2.0
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3.0
+Viewer.ViewpointX: 0.0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -1.8
+Viewer.ViewpointF: 500.0
+
+# ============================================================
+# DWE PARAMETERS
+# ============================================================
+
+# Enable dense depth estimation
+DWE.enable: 1
+
+# Photometric pyramid levels
+DWE.nLevels: 4
+
+# Patch radius (half size)
+DWE.patchRadius: 3
+
+# Max iterations per pyramid level
+DWE.maxIterations: 15
+
+# Huber loss threshold
+DWE.huberDelta: 5.0
+
+# Minimum gradient magnitude
+DWE.minGradient: 10.0
+
+# Depth bounds (meters)
+DWE.minDepth: 0.1
+DWE.maxDepth: 40.0
+
+# Use inverse depth parameterization
+DWE.useInverseDepth: 1
+
+# Enable left-right consistency check
+DWE.stereoConsistency: 1
+
+# Subpixel refinement
+DWE.subpixel: 1
+
